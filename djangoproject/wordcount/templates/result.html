@@ -1,0 +1,39 @@
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Jua" rel="stylesheet">
+
+<style>
+    body{ 
+	text-align: center;
+    }
+    h1{
+        font-family: 'Baloo Bhai', cursive;
+        font-family: 'Jua', sans-serif;
+        font-size : 50px;
+        color: hotpink;
+    }
+    h2{
+	font-family: 'Baloo Bhai', cursive;
+    font-family: 'Jua', sans-serif;
+	font-size : 30px;
+	color: hotpink;
+    }
+    a{
+	font-family: 'Baloo Bhai', cursive;
+    font-family: 'Jua', sans-serif;
+	font-size : 20px;
+	color: hotpink;
+    }
+</style>
+    
+<h1 style="margin-top:50px">당신이 입력한 텍스트는 {{total}} 로 구성되어 있습니다 !!</h1>
+<a href="{%url 'home'%}"> 다시 하기 </a>
+<br>
+<h2> 입력한 텍스트  </h2>
+<form action="{%url 'result'%}">
+    <textarea cols="40" rows="3" style="color:hotpink; font-family: 'Baloo Bhai', cursive;font-family: 'Jua', sans-serif;font-size : 17px; outline-style:solid; outline-color: hotpink; outline-width: 5px;">{{full}}</textarea>
+</form>
+
+<h2> 단어 카운트  </h2>
+<form action="{%url 'result'%}">
+    <textarea cols="40" rows="10" style="color:hotpink; font-family: 'Baloo Bhai', cursive;font-family: 'Jua', sans-serif;font-size : 17px; outline-style:solid; outline-color: hotpink; outline-width: 5px;">{% for word, howmany in dictionary%}{{word}} : {{howmany}}
+{%endfor%}</textarea>
+</form>

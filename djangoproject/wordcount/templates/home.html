@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Jua" rel="stylesheet">
+
+<style>
+body{ 
+	text-align: center;
+}
+h1{
+	font-family: 'Baloo Bhai', cursive;
+    font-family: 'Jua', sans-serif;
+	font-size : 50px;
+	color: hotpink;
+}
+a{
+	font-family: 'Baloo Bhai', cursive;
+    font-family: 'Jua', sans-serif;
+	font-size : 20px;
+	color: hotpink;
+}
+</style>
+
+<h1 style="margin-top:50px">안녕하세요, 여기서 글자를 세세요!!</h1>
+<br>
+<a href="{%url 'about'%}">ABOUT</a>
+<br><br><br><br>
+<form action="{%url 'result'%}">
+    <textarea cols="40" rows="10" name="fulltext" style="color:hotpink; font-family: 'Baloo Bhai', cursive;font-family: 'Jua', sans-serif;font-size : 20px; outline-style:solid; outline-color: hotpink; outline-width: 5px;"></textarea>
+    <br><br><br><br>
+    <input type="submit" style="color:hotpink; font-family: 'Baloo Bhai', cursive;font-family: 'Jua', sans-serif;font-size : 20px; background-color: white;border-radius:0.5em; outline-color: hotpink; outline-width: 3px;" value="제출">
+</form>
